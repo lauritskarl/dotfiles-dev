@@ -7,7 +7,7 @@
   },
   "onCreateCommand": "sudo apt update && sudo apt upgrade -y && sudo apt install fish -y",
   "postCreateCommand": {
-    "tailscale": "sudo tailscale up --ssh --accept-routes --auth-key='$TS_AUTH_KEY'",
+    "tailscale": "sudo tailscale up --ssh --accept-routes --auth-key=$TS_AUTH_KEY",
     "mise": "mise trust && mise install --yes"
   },
   "postStartCommand": {
