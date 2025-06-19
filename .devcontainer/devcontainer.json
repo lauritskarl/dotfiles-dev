@@ -12,6 +12,6 @@
   },
   "postStartCommand": {
     "git": "git pull --prune",
-    "mise": "mise install --yes"
+    "mise": "mise upgrade --yes"
   }
 }
