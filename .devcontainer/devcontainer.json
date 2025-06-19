@@ -8,7 +8,6 @@
   "onCreateCommand": "sudo apt update && sudo apt upgrade -y && sudo apt install fish -y",
   "postCreateCommand": {
     "tailscale": "sudo tailscale up --ssh --accept-routes --auth-key='$TS_AUTH_KEY'",
-    "docker": "docker login -p '$GITHUB_TOKEN' 'ghcr.io'",
     "mise": "mise install --yes"
   },
   "postStartCommand": "git pull --prune",
