@@ -8,8 +8,10 @@
   "onCreateCommand": "sudo apt update && sudo apt upgrade -y && sudo apt install fish -y",
   "postCreateCommand": {
     "tailscale": "sudo tailscale up --ssh --accept-routes --auth-key='$TS_AUTH_KEY'",
-    "mise": "mise install --yes"
+    "mise": "mise trust && mise install --yes"
   },
-  "postStartCommand": "git pull --prune",
-  "postAttachCommand": "fish"
+  "postStartCommand": {
+    "git": "git pull --prune",
+    "mise": "mise install --yes"
+  }
 }
