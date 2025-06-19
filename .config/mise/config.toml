@@ -1,0 +1,8 @@
+[tools]
+bat = "latest"
+cosign = "latest"
+github-cli = "latest"
+helix = "latest"
+slsa-verifier = "latest"
+starship = "latest"
+zoxide = "latest"
